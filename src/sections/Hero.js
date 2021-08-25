@@ -27,11 +27,11 @@ const MiddleHeroWrapper = styled.div`
   }
 
   @media screen and (min-width: 324px) {
-    height: calc(100vh - 116px);
+    height: calc(100vh - 112px);
 
     &:after {
-      top: 116px;
-      height: calc(100vh - 116px);
+      top: 112px;
+      height: calc(100vh - 112px);
     }
   }
 
