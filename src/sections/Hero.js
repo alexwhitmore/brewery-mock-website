@@ -1,46 +1,81 @@
 import React from 'react';
+import { Button } from '@material-ui/core';
+import heroImage from '../images/hero-image.jpg';
+import styled from 'styled-components';
+import HeroImage from '../images/hero-image.jpg';
+
+const MiddleHeroWrapper = styled.div`
+  height: calc(100vh - 107px);
+  background-image: url(${(props) => props.img});
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: 100;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  &:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 107px;
+    height: calc(100vh - 107px);
+    width: 100%;
+    background-color: black;
+    opacity: 0.7;
+  }
+
+  @media only screen and (min-width: 800px) {
+    height: calc(100vh - 92px);
+
+    &:after {
+      top: 92px;
+      height: calc(100vh - 92px);
+    }
+  }
+
+  h1 {
+    color: #fff;
+    z-index: 10;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    text-align: center;
+  }
+
+  p {
+    color: white;
+    z-index: 10;
+    text-align: center;
+    padding: 1rem 0 1rem 0;
+    font-size: 1.25em;
+    letter-spacing: 0.15em;
+  }
+
+  .hero-button {
+    z-index: 10;
+    background: #d74229;
+    color: #1b2533;
+
+    &:hover {
+      opacity: 0.9;
+    }
+  }
+`;
 
 const Hero = () => {
   return (
     <>
-      <h1>Hero Section Placeholder</h1>
-      <p style={{ marginBottom: '10rem' }}>
-        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fuga totam
-        repellat fugit, omnis et animi saepe quo veniam iusto! Nobis iste
-        maiores corporis a sint rem nulla cupiditate odio quidem quam quo
-        voluptas, velit atque delectus? Ipsa labore tenetur odit? Impedit harum
-        excepturi delectus porro repellat qui praesentium consequuntur dolorum
-        quisquam esse itaque sint, aperiam accusantium minus. Officiis, ipsa
-        officia magni rem distinctio aliquid suscipit consectetur, veritatis
-        porro, libero ducimus perferendis dolor mollitia vel velit alias
-        impedit. Blanditiis quisquam nisi voluptate officia itaque sit nihil
-        sunt! Eos ab, ut quod unde ipsam assumenda necessitatibus natus atque
-        incidunt porro, magni doloribus!
-      </p>
-      <br />
-      <p style={{ marginBottom: '10rem' }}>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt
-        commodi minus libero sapiente facere velit quasi, facilis quia tempore
-        veniam neque iusto voluptatum ipsa, corporis labore? Animi ducimus, non,
-        quaerat dolorem ratione unde corporis saepe reiciendis ipsam soluta ea!
-        Voluptatem odit cupiditate animi, dolor nostrum perspiciatis nulla
-        libero molestias quae repellat dignissimos voluptas labore sapiente a
-        explicabo pariatur hic praesentium accusantium odio! Modi voluptatem
-        esse nostrum iure necessitatibus eum, ipsa dicta expedita provident, ex
-        tempora.
-      </p>
-      <br />
-      <p style={{ marginBottom: '10rem' }}>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt
-        commodi minus libero sapiente facere velit quasi, facilis quia tempore
-        veniam neque iusto voluptatum ipsa, corporis labore? Animi ducimus, non,
-        quaerat dolorem ratione unde corporis saepe reiciendis ipsam soluta ea!
-        Voluptatem odit cupiditate animi, dolor nostrum perspiciatis nulla
-        libero molestias quae repellat dignissimos voluptas labore sapiente a
-        explicabo pariatur hic praesentium accusantium odio! Modi voluptatem
-        esse nostrum iure necessitatibus eum, ipsa dicta expedita provident, ex
-        tempora.
-      </p>
+      <MiddleHeroWrapper img={HeroImage}>
+        <h1>West Hartford Brewing</h1>
+        <p>
+          Come visit the <strong>best</strong> brewery in CT!
+        </p>
+        <Button variant='contained' size='large' className='hero-button'>
+          Learn More
+        </Button>
+      </MiddleHeroWrapper>
     </>
   );
 };
