@@ -2,19 +2,19 @@ module.exports = {
   socialMedia: [
     {
       name: 'Instagram',
-      url: '#',
+      url: '/',
     },
     {
       name: 'Twitter',
-      url: '#',
+      url: '/',
     },
     {
       name: 'YouTube',
-      url: '#',
+      url: '/',
     },
     {
       name: 'Facebook',
-      url: '#',
+      url: '/',
     },
   ],
 

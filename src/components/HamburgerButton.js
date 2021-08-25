@@ -16,7 +16,6 @@ import {
   ListItemText,
   SwipeableDrawer,
   makeStyles,
-  IconButton,
 } from '@material-ui/core';
 
 const useStyles = makeStyles({

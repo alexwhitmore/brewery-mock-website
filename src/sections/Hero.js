@@ -1,6 +1,5 @@
 import React from 'react';
 import { Button } from '@material-ui/core';
-import heroImage from '../images/hero-image.jpg';
 import styled from 'styled-components';
 import HeroImage from '../images/hero-image.jpg';
 

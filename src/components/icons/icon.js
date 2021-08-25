@@ -8,13 +8,10 @@ const Icon = ({ name }) => {
   switch (name) {
     case 'Instagram':
       return <InstagramIcon />;
-      break;
     case 'Twitter':
       return <TwitterIcon />;
-      break;
     case 'YouTube':
       return <YouTubeIcon />;
-      break;
     case 'Facebook':
       return <FacebookIcon />;
     default:

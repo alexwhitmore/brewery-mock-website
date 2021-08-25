@@ -15,16 +15,16 @@ const Header = () => {
         <HamburgerButton />
 
         <Box className='menu-items-wrapper'>
-          <a href='#' className='menu-items'>
+          <a href='/' className='menu-items'>
             Our Beer
           </a>
-          <a href='#' className='menu-items'>
+          <a href='/' className='menu-items'>
             Menu
           </a>
-          <a href='#' className='menu-items'>
+          <a href='/' className='menu-items'>
             About
           </a>
-          <a href='#' className='menu-items'>
+          <a href='/' className='menu-items'>
             Contact
           </a>
         </Box>

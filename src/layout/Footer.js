@@ -3,15 +3,8 @@ import '../styles/footer-styles.css';
 import styled from 'styled-components';
 import Icon from '../components/icons/icon';
 
-import { Box, IconButton } from '@material-ui/core';
+import { IconButton } from '@material-ui/core';
 import { socialMedia } from '../config';
-import TwitterIcon from '@material-ui/icons/Twitter';
-import YouTubeIcon from '@material-ui/icons/YouTube';
-import FacebookIcon from '@material-ui/icons/Facebook';
-
-const HeaderWrapper = styled.h2`
-  color: pink;
-`;
 
 const FooterWrapper = styled.div`
   background: #1b2533;
@@ -87,7 +80,7 @@ const Footer = () => {
         <div>
           {socialMedia &&
             socialMedia.map(({ name, url }, i) => (
-              <IconButton key={i} href={url} className='footer-item'>
+              <IconButton key={i} className='footer-item'>
                 <Icon name={name} />
               </IconButton>
             ))}
@@ -102,7 +95,7 @@ const Footer = () => {
           paddingBottom: '1rem',
         }}>
         <a
-          href='#'
+          href='/'
           style={{
             textDecoration: 'none',
             color: '#d74229',

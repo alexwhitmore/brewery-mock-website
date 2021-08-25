@@ -1,4 +1,4 @@
-import React, { useState, useSelector } from 'react';
+import React, { useState } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import clsx from 'clsx';
 import Card from '@material-ui/core/Card';
@@ -9,10 +9,7 @@ import Collapse from '@material-ui/core/Collapse';
 import IconButton from '@material-ui/core/IconButton';
 import Typography from '@material-ui/core/Typography';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
-import MoreVertIcon from '@material-ui/icons/MoreVert';
-import BeerImageOne from '../images/beer-image-1.jpg';
 import styled from 'styled-components';
-import { Box } from '@material-ui/core';
 
 const CardWrapper = styled.div`
   display: flex;
@@ -62,6 +59,7 @@ const Featured = ({ featuredSection }) => {
   const card = featuredSection.map((item, i) => {
     return (
       <div
+        key={i}
         className='innerCard-wrapper'
         style={{
           display: 'flex',
