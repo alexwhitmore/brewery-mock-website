@@ -1,12 +1,8 @@
 import React, { useState, Fragment } from 'react';
 import '../styles/hamburger-styles.css';
-
 import MenuRoundedIcon from '@material-ui/icons/MenuRounded';
-import LocalDrinkRoundedIcon from '@material-ui/icons/LocalDrinkRounded';
-import FastfoodRoundedIcon from '@material-ui/icons/FastfoodRounded';
-import InfoRoundedIcon from '@material-ui/icons/InfoRounded';
-import MailRoundedIcon from '@material-ui/icons/MailRounded';
-
+import { menuItems } from '../config';
+import Icon from '../components/icons/icon';
 import clsx from 'clsx';
 import {
   Button,
@@ -58,28 +54,15 @@ const HamburgerButton = () => {
       onClick={toggleDrawer(anchor, false)}
       onKeyDown={toggleDrawer(anchor, false)}>
       <List>
-        {['Our Beer', 'Menu', 'About', 'Contact'].map((text, index) => (
-          <ListItem button key={text}>
-            <ListItemIcon>
-              {text === 'Our Beer' && (
-                <LocalDrinkRoundedIcon style={{ color: '#d74229' }} />
-              )}
-              {text === 'Menu' && (
-                <FastfoodRoundedIcon style={{ color: '#d74229' }} />
-              )}
-              {text === 'About' && (
-                <InfoRoundedIcon style={{ color: '#d74229' }} />
-              )}
-              {text === 'Contact' && (
-                <MailRoundedIcon style={{ color: '#d74229' }} />
-              )}
-            </ListItemIcon>
-            <ListItemText
-              primary={text}
-              style={{ textTransform: 'uppercase' }}
-            />
-          </ListItem>
-        ))}
+        {menuItems &&
+          menuItems.map(({ name, url }, i) => (
+            <ListItem button key={i} className='footer-item'>
+              <ListItemIcon style={{ color: '#d74229' }}>
+                <Icon name={name} />
+              </ListItemIcon>
+              <ListItemText primary={name} />
+            </ListItem>
+          ))}
       </List>
     </div>
   );
@@ -91,7 +74,7 @@ const HamburgerButton = () => {
           <Button
             onClick={toggleDrawer(anchor, true)}
             className='hamburger-button'>
-            <MenuRoundedIcon fontSize='large' style={{ color: '#D74229' }} />
+            <MenuRoundedIcon fontSize='large' className='hamburger-svg' />
           </Button>
           <SwipeableDrawer
             classes={{ paper: classes.paper }}

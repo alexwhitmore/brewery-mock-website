@@ -4,7 +4,7 @@ import styled from 'styled-components';
 import HeroImage from '../images/hero-image.jpg';
 
 const MiddleHeroWrapper = styled.div`
-  height: calc(100vh - 107px);
+  height: calc(100vh - 132px);
   background-image: url(${(props) => props.img});
   background-position: center;
   background-repeat: no-repeat;
@@ -19,11 +19,29 @@ const MiddleHeroWrapper = styled.div`
     content: '';
     position: absolute;
     left: 0;
-    top: 107px;
-    height: calc(100vh - 107px);
+    top: 132px;
+    height: calc(100vh - 112px);
     width: 100%;
     background-color: black;
     opacity: 0.7;
+  }
+
+  @media screen and (min-width: 324px) {
+    height: calc(100vh - 112px);
+
+    &:after {
+      top: 112px;
+      height: calc(100vh - 112px);
+    }
+  }
+
+  @media screen and (min-width: 435px) {
+    height: calc(100vh - 107px);
+
+    &:after {
+      top: 107px;
+      height: calc(100vh - 107px);
+    }
   }
 
   @media only screen and (min-width: 800px) {

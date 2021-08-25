@@ -1,4 +1,23 @@
 module.exports = {
+  menuItems: [
+    {
+      name: 'Our Beer',
+      url: '/',
+    },
+    {
+      name: 'Menu',
+      url: '/',
+    },
+    {
+      name: 'About',
+      url: '/',
+    },
+    {
+      name: 'Contact',
+      url: '/',
+    },
+  ],
+
   socialMedia: [
     {
       name: 'Instagram',
